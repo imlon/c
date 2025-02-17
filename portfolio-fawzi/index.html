@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fawzi Portfolio Landing Page</title>
+    <link rel="stylesheet" href="main.css" />
+    <script type="module" src="main.js" defer></script>
+
+    <!-- Swiper.js CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body class="w-full min-w-xs mx-auto transition-all duration-300">
+    <!-- NAV -->
+    <nav class="bg-transparent max-w-5xl mx-auto p-2 min-h-12 z-50">
+      <div class="flex justify-between items-center max-w-7xl mx-auto">
+        <div class="flex items-center">
+          <a href="#" class="text-xl font-bold h-fit dark:text-neutral-200"
+            >FAWZI
+            <span class="text-md self-center" id="nav-toggle-theme"></span
+          ></a>
+        </div>
+
+        <!-- Hamburger Button (visible on small screens) -->
+        <button id="menu-toggle" aria-label="Toggle Menu" class="sm:hidden p-2">
+          ☰
+        </button>
+        <!-- Fullscreen Overlay (Blurs & Dims Background) -->
+        <div
+          id="overlay"
+          class="fixed inset-0 bg-black/[70%] backdrop-blur-sm hidden sm:hidden"
+          onclick="toggleMenu()"
+        ></div>
+
+        <!-- Mobile Menu (drawer) / Desktop Menu (inline) -->
+        <ul
+          id="nav-menu"
+          class="fixed top-0 right-[-100%] h-full w-64 bg-white dark:bg-neutral-900 p-4 space-y-4 transition-all duration-300 sm:static sm:w-auto sm:p-0 sm:space-y-0 sm:space-x-3 sm:flex z-30"
+        >
+          <!-- // NAV with TOGGLE HAMBURGER MENU [main.css] to edit this section -->
+        </ul>
+      </div>
+    </nav>
+    <!-- HERO -->
+    <section
+      class="grid grid-cols-12 max-w-3xl grid-flow-dense mx-auto mt-16 mb-36"
+    >
+      <!-- photo and socials -->
+      <div
+        class="grid grid-cols-1 col-span-12 sm:col-span-5 sm:col-start-8 grid-flow-dense"
+      >
+        <!-- photo & socials -->
+        <div class="w-7/12 mx-auto sm:my-0 self-center sm:w-full">
+          <img src="img/img_hero.png" alt="" />
+          <!-- Hero Section Social Icons -->
+          <div
+            id="socials-hero"
+            class="flex space-x-1 my-2 justify-center"
+          ></div>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div
+        class="grid grid-cols-12 col-span-12 sm:col-span-7 sm:col-start-1 self-center"
+      >
+        <div class="col-span-12 grid grid-cols-12 grid-flow-dense">
+          <!-- Feature Position Name -->
+          <div
+            class="mx-auto w-64 sm:w-10/12 col-span-12 my-10 sm:my-4 sm:max-w-80"
+          >
+            <h1 class="leading-[90%]">UI & UX</h1>
+            <h1 class="text-right leading-[90%]">Designer</h1>
+          </div>
+          <!-- Intro -->
+          <div
+            class="w-10/12 sm:w-11/12 mx-auto my-2 sm:row-start-1 col-span-12 sm:my-1"
+          >
+            <small class="sm:text-xs font-semibold leading-[100%]"
+              >Hi I am</small
+            >
+            <h6 class="sm:text-sm font-semibold leading-[100%]">Fawzi Sayed</h6>
+          </div>
+          <!-- Description & Button -->
+          <div class="w-10/12 sm:w-11/12 mx-auto m-x-6 col-span-12">
+            <p class="text-justify">
+              Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa
+              nibh lectus netus in. Aliquet donec morbi convallis pretium.
+              Turpis tempus pharetra
+            </p>
+            <button class="btn-primary my-5 sm:text-xs">Hire Me</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section
+      class="grid grid-cols-12 max-w-3xl grid-flow-dense mx-auto my-36 place-items-center"
+    >
+      <!-- photo -->
+      <div class="col-span-5">
+        <!-- photo -->
+        <div class="w-full mx-auto sm:my-0 self-center hidden sm:block">
+          <img src="img/img_about.png" alt="" />
+          <!-- socials -->
+        </div>
+      </div>
+
+      <!-- Skills Bar -->
+      <div class="w-10/12 mx-auto space-y-3 col-span-12 sm:col-span-7">
+        <h2>About Me</h2>
+        <p class="text-justify">
+          Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
+          lectus netus in. Aliquet donec morbi convallis pretium. Turpis tempus
+          pharetra
+        </p>
+
+        <!-- Progress Bars -->
+        <div class="space-y-3">
+          <div>
+            <label class="font-semibold text-sm block">UX</label>
+            <div class="progress-bar" data-progress="90"></div>
+          </div>
+
+          <div>
+            <label class="font-semibold text-sm block">Website Design</label>
+            <div class="progress-bar" data-progress="75"></div>
+          </div>
+
+          <div>
+            <label class="font-semibold text-sm block">App Design</label>
+            <div class="progress-bar" data-progress="65"></div>
+          </div>
+
+          <div>
+            <label class="font-semibold text-sm block">Graphic Design</label>
+            <div class="progress-bar" data-progress="80"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SERVICES -->
+    <section
+      class="grid grid-cols-12 max-w-3xl grid-flow-dense mx-auto my-20 place-items-center w-10/12"
+    >
+      <div class="col-span-12">
+        <h2 class="text-center">Services</h2>
+        <p class="text-center w-full max-w-xl mx-auto my-4">
+          Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
+          lectus netus in.
+        </p>
+      </div>
+      <!-- List of Services -->
+      <div
+        id="services-container"
+        class="col-span-12 grid grid-cols-1 min-[360px]:grid-cols-2 min-[760px]:grid-cols-4 gap-3 my-2"
+      >
+        <!-- ADD MORE on main.js -->
+      </div>
+    </section>
+
+    <!-- My Projects -->
+    <section
+      class="grid grid-cols-12 max-w-5xl mx-auto my-36 place-items-center w-10/12"
+    >
+      <div class="col-span-12">
+        <h2 class="text-center text-3xl">My Projects</h2>
+        <p class="text-center w-full max-w-xl mx-auto my-4">
+          Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
+          lectus netus in.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div
+        id="filter-buttons"
+        class="flex justify-center gap-1 sm:gap-3 mt-1 col-span-12"
+      >
+        <button
+          data-category="All"
+          class="text-neutral-600 filter-btn text-[0.5rem] sm:text-xs px-4 py-1 border rounded-md bg-neutral-100"
+        >
+          All
+        </button>
+        <button
+          data-category="UI/UX"
+          class="text-neutral-600 filter-btn text-[0.5rem] sm:text-xs px-4 py-1 border rounded-md bg-neutral-100"
+        >
+          UI/UX
+        </button>
+        <button
+          data-category="Web Design"
+          class="text-neutral-600 filter-btn text-[0.5rem] sm:text-xs px-4 py-1 border rounded-md bg-neutral-100"
+        >
+          Web <span class="hidden md:inline-block">Design</span>
+        </button>
+        <button
+          data-category="App Design"
+          class="text-neutral-600 filter-btn text-[0.5rem] sm:text-xs px-4 py-1 border rounded-md bg-neutral-100"
+        >
+          App <span class="hidden md:inline-block">Design</span>
+        </button>
+        <button
+          data-category="Graphic Design"
+          class="text-neutral-600 filter-btn text-[0.5rem] sm:text-xs px-4 py-1 border rounded-md bg-neutral-100"
+        >
+          Graphic <span class="hidden md:inline-block">Design</span>
+        </button>
+      </div>
+
+      <!-- Swiper Container -->
+      <div class="col-span-12 w-full mt-2 select-none">
+        <!-- Projects Swiper -->
+        <div class="swiper project-swiper">
+          <div class="swiper-wrapper pb-6" id="project-container">
+            <!-- Project slides will be inserted dynamically -->
+          </div>
+
+          <!-- Project Swiper Pagination -->
+
+          <div class="swiper-pagination projects-pagination !-bottom-1"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="w-full mx-auto text-center py-16">
+      <h2 class="text-3xl">Testimonials</h2>
+      <p class="mt-2 mx-auto w-10/12 max-w-xl">
+        Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
+        lectus netus in.
+      </p>
+
+      <!-- Swiper Container -->
+      <div class="relative mt-8 max-w-7xl mx-auto">
+        <div class="swiper testimonials-swiper">
+          <div class="swiper-wrapper">
+            <!-- Testimonial slides will be dynamically generated here -->
+          </div>
+
+          <!-- Swiper Pagination (Only for Testimonials) -->
+          <div class="swiper-pagination testimonials-pagination mt-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      class="grid grid-cols-12 max-w-5xl mx-auto my-36 place-items-center w-10/12"
+    >
+      <div class="col-span-12">
+        <h2 class="text-center text-3xl">Let's Design Together</h2>
+        <p class="text-center w-full max-w-xl mx-auto my-4">
+          Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
+          lectus netus in.
+        </p>
+      </div>
+
+      <!-- Input Form -->
+      <form
+        class="col-span-12 flex flex-row items-center gap-3 mt-6 w-full max-w-lg mx-auto"
+      >
+        <!-- Email Input -->
+        <input
+          type="email"
+          placeholder="Enter Your Email"
+          class="w-full sm:flex-1 px-4 py-2 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 dark:bg-neutral-200"
+          required
+        />
+        <!-- Contact Me Button -->
+        <button type="submit" class="btn-primary px-6 py-3">
+          <!-- Mobile Icon -->
+          <span class="sm:hidden text-neutral-100">
+            <svg
+              class="h-4"
+              viewBox="0 -2.5 20 20"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              fill="currentColor"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <defs></defs>
+                <g
+                  id="Page-1"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                >
+                  <g
+                    id="Dribbble-Light-Preview"
+                    transform="translate(-340.000000, -922.000000)"
+                    fill="currentColor"
+                  >
+                    <g id="icons" transform="translate(56.000000, 160.000000)">
+                      <path
+                        d="M294,774.474 L284,765.649 L284,777 L304,777 L304,765.649 L294,774.474 Z M294.001,771.812 L284,762.981 L284,762 L304,762 L304,762.981 L294.001,771.812 Z"
+                        id="email-[#1572]"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </span>
+          <!-- Text for Larger Screens -->
+          <span class="hidden sm:block">Contact Me</span>
+        </button>
+      </form>
+    </section>
+    <!-- FOOTER -->
+    <section
+      class="w-full mx-auto text-center pt-16 bg-neutral-100 dark:bg-neutral-800"
+    >
+      <a href="#" class="text-xl font-bold h-fit dark:text-neutral-200"
+        >FAWZI <span class="text-md self-center" id="footer-toggle-theme"></span
+      ></a>
+      <!-- Footer Menu -->
+      <ul
+        id="footer-menu"
+        class="flex flex-wrap justify-center gap-4 mt-4"
+      ></ul>
+      <!-- Footer Section Social Icons -->
+      <div id="socials-footer" class="flex space-x-1 my-8 justify-center"></div>
+      <div
+        class="bg-neutral-500 dark:bg-neutral-900 w-full mx-auto text-white text-xs font-extralight py-3"
+      >
+        © 2023
+        <span class="font-semibold text-orange-400 leading-relaxed"
+          >FawziUiUx</span
+        >
+        All Rights Reserved , Inc.
+      </div>
+    </section>
+  </body>
+</html>
